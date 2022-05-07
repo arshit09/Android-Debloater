@@ -39,3 +39,7 @@ else:
 for i in range (0, len(output)):
     package = "adb shell pm uninstall -k --user 0 " + output[i]
     os.system(package)
+
+msg = "App(s) uninstalled sucessfully!"
+button = "Exit and Thank you :)"
+easygui.msgbox(msg, title, button )
