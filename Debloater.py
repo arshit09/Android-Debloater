@@ -9,7 +9,7 @@ if easygui.ccbox(msg, title):
 else:
     sys.exit(0)
 
-text = "Selected package name to uninstall:"
+text = "Select package name to uninstall:"
 choices = ["Geek", "Super Geeek", "Super Geek 2", "Super Geek God"]
 package_list = os.popen('adb shell cmd package list packages').read()
 
@@ -24,12 +24,14 @@ confirm_list = output
 
 for i in range (0, len(output)):
     output[i] = output[i][int(output[i].find(' '))+1:]
-msg = "Do you want to really uninstall following packages? \n\n"
+msg = "Do you want to really uninstall following packages?\n"
+msg = msg + "\nTotal number of apps to be uninstalled:\n" + str(len(confirm_list)) + "\n\nPackage name(s):\n"
 for i in  range (0, len(confirm_list)):
     msg = msg + confirm_list[i] + "\n"
 
 title = "! CAUTION ! - Debloater by Arshit Vaghasiya"
 msg = msg + "\n--------------------------\n| I KNOW WHAT I AM DOING | \n--------------------------"
+
 
 if easygui.ccbox(msg, title):
     pass
@@ -40,6 +42,8 @@ for i in range (0, len(output)):
     package = "adb shell pm uninstall -k --user 0 " + output[i]
     os.system(package)
 
-msg = "App(s) uninstalled sucessfully!"
+msg = "Following package(s) uninstalled sucessfully!\n\n"
+for i in  range (0, len(confirm_list)):
+    msg = msg + confirm_list[i] + "\n"
 button = "Exit and Thank you :)"
 easygui.msgbox(msg, title, button )
