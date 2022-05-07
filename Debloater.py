@@ -2,7 +2,7 @@ import os
 import sys
 import easygui
 
-msg = "Debloat your phone with just a few clicks.\n\nPlease visit my Github repo(https://github.com/arshit09/Android-Debloater) for the instruction and caution before proceeding further."
+msg = "Debloat your phone with just a few clicks.\n\nPlease visit my Github repo(https://github.com/arshit09/Android-Debloater) for the instructions.\n\nDISCLAIMER:\nUSE AT YOUR OWN RISK, PLEASE.\nANYTHING THAT HAPPENS TO YOUR PHONE IS NOT MY RESPONSIBILITY."
 title = "Debloater by Arshit Vaghasiya"
 if easygui.ccbox(msg, title):
     pass
