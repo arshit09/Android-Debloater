@@ -2,7 +2,7 @@ import os
 import sys
 import easygui
 
-msg = "Debloat your phone with just a few clicks.\n\nPlease visit my Github repo(https://github.com/arshit09/Android-Debloater) for the instructions.\n\nDISCLAIMER:\nUSE AT YOUR OWN RISK, PLEASE.\nANYTHING THAT HAPPENS TO YOUR PHONE IS NOT MY RESPONSIBILITY."
+msg = "Debloat your phone with just a few clicks.\n\nPlease visit my Github repo(https://github.com/arshit09/Android-Debloater) for the instructions.\n\nDISCLAIMER:\nUSE AT YOUR OWN RISK, PLEASE.\n\nAnything that happens to your phone is not my responsibility.\nBy pressing 'Continue', you are agreeing that anything that happens with your phone is ONLY AND ONLY RESULT OF YOUR ACTION."
 title = "Debloater by Arshit Vaghasiya"
 if easygui.ccbox(msg, title):
     pass
@@ -30,8 +30,7 @@ for i in  range (0, len(confirm_list)):
     msg = msg + confirm_list[i] + "\n"
 
 title = "! CAUTION ! - Debloater by Arshit Vaghasiya"
-msg = msg + "\n--------------------------\n| I KNOW WHAT I AM DOING | \n--------------------------"
-
+msg = msg + "\n--------------------------\n\n--------------------------\n| I KNOW WHAT I AM DOING | \n--------------------------\n\n--------------------------"
 
 if easygui.ccbox(msg, title):
     pass
